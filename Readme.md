@@ -17,6 +17,18 @@ Mail Assistant connects to your Gmail accounts (using OAuth) and analyzes incomi
 * **AI-Powered Analysis:** Leverages AI to understand email context and suggest relevant replies.
 * **Customizable Labels:** You can define custom labels to categorize emails according to your specific needs.
 
+### Tech Stack:
+
+* Express.js With Typescript
+* @google/generative-ai for Gemini Apis
+* BullMQ for task Scheduling
+* ioredis For Redis Connections
+* CronJobs for timely Execution
+* Dotenv For managing Secrets
+* google-auth-library for OAuth Configuration
+* googleapis For Gmail Apis
+
+
 ### Setting Up Mail Assistant
 
 **Prerequisites:**
