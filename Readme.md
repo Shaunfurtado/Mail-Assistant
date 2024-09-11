@@ -4,10 +4,10 @@
 
 This project, Mail Assistant, is a tool built using TypeScript that automates email responses using Artificial Intelligence (AI). It leverages BullMQ as a task scheduler to process incoming emails and generate relevant replies based on their content.
 
-## NOTE (limitations):
+> NOTE:
 
-- Outlook implementation unavailable, due to issue with Azure Account Verification which is required for Oauth.
-- Gemini Api (gemini-1.5-flash) used Instead of OpenAI (gpt-3.5) due to unavailable Credits.
+> - Outlook implementation unavailable, due to issue with Azure Account Verification which is required for Oauth.
+> - Gemini Api (gemini-1.5-flash) used Instead of OpenAI (gpt-3.5) due to unavailable Credits.
 
 ### Project Description
 
