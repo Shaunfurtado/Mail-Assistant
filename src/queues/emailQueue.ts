@@ -35,9 +35,10 @@ const worker = new Worker('email-processing', async (job) => {
 
   try {
     const snippet = emailData.snippet;
-    const label = await analyzeEmailContext(snippet);
+    const subject = emailData.payload.headers.find((header: any) => header.name === 'Subject')?.value || 'No Subject';
+    const label = await analyzeEmailContext(subject, snippet);
     console.log(`Email classified as: ${label}`);
-    const replyMessage = await generateReply(snippet, label || 'default');
+    const replyMessage = await generateReply(subject, snippet, label || 'default');
     console.log(`Generated reply: ${replyMessage}`);
     await sendEmailReply(emailData, replyMessage || 'Hi, \nThank you for reaching out! I appreciate your message and will get back to you soon. \nBest regards');
     console.log(`Reply sent: ${replyMessage}`);
